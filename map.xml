@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<map proto="1.4.0">
+<version>1.0</version>
+<include src="blitz-global.xml"/>
+<name>Rage Waterfall</name>
+<objective>Defeat the enemy team!</objective>
+<blitz>
+    <time>5m</time>
+    <lives>2</lives>
+    <broadcastLives>true</broadcastLives>
+    <title>Rage</title>
+</blitz>
+<rage/>
+<authors>
+    <author uuid="491eea0e-65e6-422a-a310-ac853fae6191"/> <!-- TheNickLazer -->
+    <author uuid="79882ab2-5566-4319-88e5-8f8e32a88018"/> <!-- rackmc100 -->
+    <author uuid="bdb417b7-8d57-460f-951e-69dfaf764430"/> <!-- Conquer_ -->
+</authors>
+<contributors>
+    <contributor uuid="408916f8-bedf-48a4-a841-d19ea0ed1a87"</contributor>  <!-- bibblettuce -->
+    <contributor uuid="e4b99cb2-9d7a-49a5-9743-f5b107d21053"</contributor>  <!-- TheAAG -->
+</contributors>
+<teams>
+    <team id="red"
+          color="dark red"
+          show-name-tags="true"
+          max="12" max-overfill="15">Red Team</team>
+    <team id="blue"
+          color="blue"
+          show-name-tags="true"
+          max="12" max-overfill="15">Blue Team</team>
+</teams>
+<kits>
+    <kit id="spawn">
+        <item slot="0" unbreakable="true" enchantment="damage all:10">iron sword</item>
+        <item slot="1" unbreakable="true" enchantment="arrow damage:10">bow</item>
+        <item slot="2">arrow</item>
+    </kit>
+    <kit id="bkit" parents="spawnKit">
+        <helmet  color="0000aa">leather helmet</helmet>
+        <chestplate color="0000aa">leather chestplate</chestplate>
+        <leggings color="0000aa">leather leggings</leggings>
+        <boots color="0000aa">leather boots</boots>
+    </kit>
+    <kit id="rkit" parents="spawnKit">
+        <helmet  color="aa0000">leather helmet</helmet>
+        <chestplate color="aa0000">leather chestplate</chestplate>
+        <leggings color="aa0000">leather leggings</leggings>
+        <boots color="aa0000">leather boots</boots>
+    </kit>
+    <kit name="jump">
+        <potion duration="3" amplifier="4">jump</potion>
+    </kit>
+</kits>
+<killreward>
+    <item>arrow</item>
+</killreward>
+<itemremove>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+</itemremove>
+<spawns>
+    <spawn team="blue" kit="bkit">
+        <regions yaw="-135">
+            <block>30.5,51,-33.5</block>
+        </regions>
+    </spawn>
+    <spawn team="red" kit="rkit">
+        <regions yaw="45">
+            <block>54.5,51,-95.5</block>
+        </regions>
+    </spawn>
+    <default>
+        <regions yaw="-90">
+            <block>75,62,-65</block>
+        </regions>
+    </default>
+</spawns>
+<regions>
+    <apply block-break="never">
+        <region><everywhere/></region>
+    </apply>
+    <apply kit="jump">
+        <region><rectangle min="-5,-5" max="5,5"/></region>
+    </apply>
+</regions>
+<hunger>
+    <depletion>off</depletion>
+</hunger>
+</map>
