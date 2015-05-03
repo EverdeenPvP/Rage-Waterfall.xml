@@ -83,7 +83,7 @@
         <region><everywhere/></region>
     </apply>
     <apply kit="jump">
-        <region><rectangle min="-5,-5" max="5,5"/></region>
+        <region><rectangle min="41,65" max="43,-63"/></region>
     </apply>
 </regions>
 <hunger>
